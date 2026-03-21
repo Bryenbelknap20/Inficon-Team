@@ -6,6 +6,44 @@ import java.io.*;
 
 public class QuestionFileScraper {
 
+    public static void main(String[] args) {
+//        // Defining the file
+//        QuestionFileScraper scraper = new QuestionFileScraper("Q1.txt");
+//
+//        // Run
+//        scraper.scrape();
+//
+//        // Show the result
+//        String intent = scraper.analyzeIntent();
+//        System.out.println("category: " + intent);
+//
+//        // for debug. show how many times each words appeared
+//        scraper.printTopWords(5);
+
+
+        // List of the file which we want to analyze
+        //Should be editing later
+        String[] targetFiles = {"Q1.txt", "Q2.txt", "Q3.txt"};
+
+        // List of the result, showing which file asking about what
+        java.util.List<Result> allResults = new java.util.ArrayList<>();
+
+        for (String fileName : targetFiles) {
+            QuestionFileScraper scraper = new QuestionFileScraper(fileName);
+            scraper.scrape();
+
+            String intent = scraper.analyzeIntent();
+
+            // keep the pair of (fileName, intent) here
+            allResults.add(new Result(fileName, intent));
+        }
+
+        // check
+        for (Result res : allResults) {
+            System.out.println("File: " + res.fileName + " -> Intent: " + res.intent);
+        }
+    }
+
     public java.util.List<String> myArray = new java.util.ArrayList<>();
     public String qFile;
     public QuestionFileScraper(String qFile) {
@@ -105,12 +143,41 @@ public class QuestionFileScraper {
 
         return bestCategory;
     }
+
+    public void printTopWords(int limit) {
+        System.out.println("\n--- [" + this.qFile + "] Top Keywords ---");
+
+        // Get whole keys(Words) from SimpleMap
+        java.util.List<String> keys = wordFrequencyMap.keys();
+
+        if (keys.isEmpty()) {
+            System.out.println("No words found.");
+            return;
+        }
+
+        // regenerate depending on score(which means how many time they appeared)
+        keys.sort((a, b) -> wordFrequencyMap.get(b).compareTo(wordFrequencyMap.get(a)));
+
+        // Show wanted limited word
+        for (int i = 0; i < Math.min(limit, keys.size()); i++) {
+            String word = keys.get(i);
+            System.out.println((i + 1) + ". " + word + " (" + wordFrequencyMap.get(word) + " times)");
+        }
+    }
 }
 
 
 
 
+class Result {
+    String fileName;
+    String intent;
 
+    Result(String fileName, String intent) {
+        this.fileName = fileName;
+        this.intent = intent;
+    }
+}
 
 class SimpleMap<K, V> implements Serializable {
     private static final long serialVersionUID = 1L;

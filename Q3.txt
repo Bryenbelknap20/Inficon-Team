@@ -1,0 +1,1 @@
+The system keeps showing a connection error during the initial setup. I looked at the manual but it is still not working. How can I fix this broken component?
