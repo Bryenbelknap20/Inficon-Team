@@ -3,6 +3,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.io.*;
+import org.apache.tika.Tika;
 
 public class QuestionFileScraper {
 
@@ -52,6 +53,7 @@ public class QuestionFileScraper {
 
     public void scrape() {
         // Prepare the file to read. Should be remake lately
+        // Use "Apache" to change multiple file tyoe into .txt
         File file = new File(this.qFile);
 
         // Check the file is existing or not
@@ -63,13 +65,28 @@ public class QuestionFileScraper {
         // Before doing new file, reset the table.
         wordFrequencyMap = new SimpleMap<>();
 
-        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                // ここで tokenize を呼ぶ。仕事は全部あっちでやる。
-                tokenize(line);
-            }
-        } catch (IOException e) {
+//        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+//            String line;
+//            while ((line = br.readLine()) != null) {
+//                // Call tokenize
+//                tokenize(line);
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+        String line = "";
+        try {
+            // Making Tika instance
+            Tika tika = new Tika();
+
+            // Tika will change every file type into line.txt
+            line = tika.parseToString(file);
+
+            // through line.txt to tokenizeS
+            tokenize(line);
+
+        } catch (Exception e) {
+            System.out.println("Tika error: " + e.getMessage());
             e.printStackTrace();
         }
     }
