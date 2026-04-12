@@ -24,7 +24,7 @@ public class QuestionFileScraper {
 
         // List of the file which we want to analyze
         //Should be editing later
-        String[] targetFiles = {"Q1.txt", "Q2.txt", "Q3.txt"};
+        String[] targetFiles = {"Q1.txt", "Q2.txt", "Q3.txt", "Q4.pdf"};
 
         // List of the result, showing which file asking about what
         java.util.List<Result> allResults = new java.util.ArrayList<>();
@@ -131,6 +131,23 @@ public class QuestionFileScraper {
         dictionary.put("TECHNICAL_ISSUE", new String[]{"error", "broken", "setup", "how", "manual", "not working"});
         dictionary.put("BILLING_INQUIRY", new String[]{"price", "cost", "invoice", "billing", "payment", "money"});
         dictionary.put("LOGISTICS_INFO", new String[]{"shipping", "delivery", "track", "when", "arrival", "address"});
+
+        dictionary.put("Section 1: Company Overview", new String[]{"full", "name", "company", "legal", "company's",
+                        "address", "main", "phone", "number", "who", "parent", "company", "country", "operation",
+                        "product", "products", "service", "services", "offer"});
+        dictionary.put("Section 2: Operations", new String[]{"administrative", "hour", "hours", "operation", "manufacturing",
+                        "shift", "total", "number", "employees", "how many", "work", "office", "outside", "remote", "inficon kansas"});
+        dictionary.put("Section 3: Business Registration & Legal Information", new String[]{"tax", "tax id", "AG", "TIN",
+                        "classification", "CAGE", "Code", "SAM", "UEI", "GSA", "Contract", "number", "EMR", "state", "incorporated",
+                        "DUNS", "Number", "Federal", "ID", "Commercial", "Registration", "Number", "Register", "Court", "CPSR", "Certified",
+                        "incorporated", "Market", "Exchange", "listing", "Congressional", "District", "years", "business", "corporate",
+                        "structure", "exempt"});
+        dictionary.put("Section 4: Certifications", new String[]{"ISO", "certificate", "number", "validity", "period", "certifications", "contact"});
+        dictionary.put("Section 5: Industry Classifications", new String[]{"Primary", "NAICS", "Code", "Secondary", "additional", "SIC", "List", "all", "UNSPSC", "found"});
+        dictionary.put("Section 6: Business Classification", new String[]{"business", "size", "classification", "entity", "type", "Minority", "owned",
+                        "Hub", "Zone", "Veteran", "owned", "Native", "Woman"});
+        dictionary.put("Section 7: Leadership & Organization", new String[]{"CEO", "CFO", "Chairman", "Board" , "Directors", "members", "President",
+                        "VP", "Finance", "Treasurer", "General", "Counsel", "Secretary"});
 
         // --- Scoring method ---
         // Check the whole words of wordFrequencyMap
