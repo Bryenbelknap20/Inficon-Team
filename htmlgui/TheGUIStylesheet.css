@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 12px;
+    font: Arial;
+}
+
+h1, h3, h5{
+    background-color: #f4f4f4;
+}
+
+body{
+    background-image: url("inficon_logo.png");
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: 10px;
+    margin-top: 120px;
+}
+
+input.file{
+    background: black;
+}
+
+div.flex-container{
+    display: flex;
+    flex-direction: row;
+}
+
+div.flex-container > div{
+    margin: 10px;
+}
+
+
+.interactable{
+    border: solid;
+    border-color: #007aff;
+    background-color: white;
+    text-decoration: none;
+    color: #007aff;
+}
+.interactable:hover{
+    background-color: #007aff;
+    color: white;
+    cursor: pointer;
+}
