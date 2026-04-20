@@ -13,18 +13,52 @@
                 <h1>Adding files:</h1>
                 <p>this is column one</p>
                 <button class="interactable" onclick="aGoodName()">click please</button>
+                <button class="interactable" onclick="destruction()">click to remove</button>
+
             </div>
             <div style="width: 75%; background-color: #f0f0f0">
                 <h1>Files:</h1>
                 <label for="gsearch">search</label>
+                <p id="abc"></p>
                 <input type="search" id="gsearch" name="gsearch" style="border-radius: 7px;">
                 <script>
                     function aGoodName() {
                         var x = document.createElement("INPUT");
                         x.setAttribute("type", "file");
+                        x.setAttribute("id", document.getElementById("result").childElementCount);
+                        document.getElementById("abc").innerHTML = document.getElementById("result").childElementCount + "";
                         x.accept = ".pdf, .txt";
                         x.style = "background: #f4f4f4; border-radius: 5px; border: solid; margin: 10px";
+
+                        var y = document.createElement("INPUT");
+                        y.setAttribute("type", "submit");
+                        y.setAttribute("value", "inspect");
+                        y.setAttribute("class", "interactable");
+                        y.setAttribute("id", (document.getElementById("result").childElementCount + 1));
+
+
+                        var z = document.createElement("INPUT");
+                        z.setAttribute("type", "submit");
+                        z.setAttribute("value", "remove");
+                        z.setAttribute("class", "interactable");
+                        z.setAttribute("onClick", "destructionOther(" + document.getElementById("result").childElementCount + ")");
+                        z.setAttribute("id", (document.getElementById("result").childElementCount + 2));
+
                         document.getElementById("result").appendChild(x);
+                        document.getElementById("result").appendChild(y);
+                        document.getElementById("result").appendChild(z);
+                    }
+                    function destruction(){
+                        for(let i = 0; i < 3; i++) {
+                            const y = document.getElementById("result").lastElementChild;
+                            y.remove();
+                        }
+                    }
+                    function destructionOther(defg){
+                        for(let i = 0; i < 3; i++) {
+                            const y = document.getElementById("result");
+                            y.removeChild(document.getElementById(defg + i));
+                        }
                     }
                 </script>
                 <p id="result"></p>

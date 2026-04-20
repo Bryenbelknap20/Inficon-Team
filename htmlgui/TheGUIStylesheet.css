@@ -35,6 +35,7 @@ div.flex-container > div{
 .interactable{
     border: solid;
     border-color: #007aff;
+    border-radius: 7px;
     background-color: white;
     text-decoration: none;
     color: #007aff;
