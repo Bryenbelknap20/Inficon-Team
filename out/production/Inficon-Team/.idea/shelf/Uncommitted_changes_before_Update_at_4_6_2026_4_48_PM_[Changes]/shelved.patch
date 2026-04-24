@@ -1,0 +1,57 @@
+Index: InficonParser.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/InficonParser.json b/InficonParser.json
+new file mode 100644
+--- /dev/null	(date 1775507909299)
++++ b/InficonParser.json	(date 1775507909299)
+@@ -0,0 +1,1 @@
++
+Index: InficonMainPage
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class HelloWorld \r\n{\r\n    public static void main(String[] args) \r\n    {\r\n        System.out.println(\"Hello, World!\");\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/InficonMainPage b/InficonMainPage
+--- a/InficonMainPage	(revision 5deaa5716d71dfb05fd1627365e1ff53e70ad372)
++++ b/InficonMainPage	(date 1774576590309)
+@@ -1,7 +1,15 @@
+-public class HelloWorld 
++public class HelloWorld
+ {
+-    public static void main(String[] args) 
++    public static void main(String[] args)
+     {
+         System.out.println("Hello, World!");
++                System.out.println("Hello, World!");
++
++
++    //this is just to show a push in code
++
++
+     }
+-}
+\ No newline at end of file
++}
++
++
+Index: .idea/codeStyles/codeStyleConfig.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/codeStyles/codeStyleConfig.xml b/.idea/codeStyles/codeStyleConfig.xml
+new file mode 100644
+--- /dev/null	(date 1774576174542)
++++ b/.idea/codeStyles/codeStyleConfig.xml	(date 1774576174542)
+@@ -0,0 +1,5 @@
++<component name="ProjectCodeStyleConfiguration">
++  <state>
++    <option name="PREFERRED_PROJECT_CODE_STYLE" value="Default" />
++  </state>
++</component>
+\ No newline at end of file
