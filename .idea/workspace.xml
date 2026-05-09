@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4a6946c-eda9-47f9-b084-cff9124e0919" name="Changes" comment="I just added stuff to check">
-      <change afterPath="$PROJECT_DIR$/INFICON_Company_Information.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Inficon-Team.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Inficon-Team.iml" afterDir="false" />
+    <list default="true" id="c4a6946c-eda9-47f9-b084-cff9124e0919" name="Changes" comment="This push is not fully complete but it has a unfinished JSON add on I removed a lot so orginal would still work. I have also add a completed GUI to implement into our project.">
+      <change afterPath="$PROJECT_DIR$/Directory.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConfluencePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConfluencePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inficon-Team/ConfluencePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Inficon-Team/ConfluencePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Inficon-Team/ConfluencePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainGUIInficon/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUIInficon/nbproject/project.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainGUIInficon/src/mainguiinficon/MainGUIInficon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGUIInficon/src/mainguiinficon/MainGUIInficon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,12 +30,12 @@
     &quot;assignee&quot;: &quot;Bryenbelknap20&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Bryenbelknap20/Inficon-Team.git",
-    "accountId": "40848e6e-c4ee-491a-bb64-23858e744d4f"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Bryenbelknap20/Inficon-Team.git&quot;,
+    &quot;accountId&quot;: &quot;392c8c27-a401-4ac0-a94b-86ab6c1f80ef&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -48,6 +47,9 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="3Alq4aF5JJI2co4FjIQHlmpcM3g" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -120,7 +122,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.31033.145" />
       </set>
     </attachedChunks>
   </component>
@@ -142,6 +145,8 @@
       <workItem from="1774575292776" duration="2813000" />
       <workItem from="1774806682067" duration="69000" />
       <workItem from="1775503466916" duration="2549000" />
+      <workItem from="1777761365171" duration="4000" />
+      <workItem from="1778000555336" duration="27000" />
     </task>
     <task id="LOCAL-00001" summary="I just added stuff to check">
       <option name="closed" value="true" />
