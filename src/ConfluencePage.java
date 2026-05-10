@@ -25,7 +25,7 @@ public class ConfluencePage {
     }
 
     private void initDictionary() {
-        // 辞書の定義 (QuestionFileScraperと同じものを使用)
+        // Defanition  of the dictionary (Same as QuestionFileScraper)
         dictionary.put("Section 1: Company Overview", new String[]{"full", "name", "company", "legal", "company's",
                 "address", "main", "phone", "number", "who", "parent", "country", "operation",
                 "product", "products", "service", "services", "offer", });

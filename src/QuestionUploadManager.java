@@ -32,7 +32,10 @@ public class QuestionUploadManager {
 
         List<File> uploadedFiles = new ArrayList<>();
         for (File file : files) {
-            if (file.isFile()) {
+//            if (file.isFile()) {
+//                uploadedFiles.add(file);
+//            }
+            if (file.isFile() && file.getName().startsWith("Q")) {
                 uploadedFiles.add(file);
             }
         }
