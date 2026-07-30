@@ -5,7 +5,5 @@ This is the github repo for Our CSC380 Project. For context, INFICON is largely 
 ___________________________
 Belknap, Bryen             |
 Hagiwara, Ko               |
-Mendoza, Anthony           |
-Scruggs-Muhammad, Apriah   |
-Yemliha, Ahmed             |
+Mendoza, Anthony           | 
 ___________________________|
